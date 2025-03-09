@@ -25,9 +25,13 @@ cd My-Website
 start index.html
 
 📷 Capturas de Ecrã
-![image](https://github.com/user-attachments/assets/db6daa88-6633-4fc1-9ded-a17612f976b4)
+![Captura de ecrã 2025-03-09 203554](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
 
+![image](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
 
+![image](https://github.com/user-attachments/assets/186d36f3-fd5c-4acb-8761-0f493055c620)
+
+![image](https://github.com/user-attachments/assets/e3a8dcab-90e0-4ce1-8395-263ca2ace06b)
 
 📬 Contacto
 Se quiseres entrar em contacto comigo, podes encontrar-me em:
