@@ -15,9 +15,6 @@ Este é o meu portfólio pessoal, onde apresento os meus projetos, competências
 🔧 Como Executar Localmente
 Se quiseres testar ou modificar o site, segue estes passos:
 
-bash
-Copiar
-Editar
 # Clonar o repositório
 git clone https://github.com/joaoevaristo11/My-Website.git
 
@@ -26,15 +23,16 @@ cd My-Website
 
 # Abrir o index.html num browser
 start index.html
+
 📷 Capturas de Ecrã
-💡 Aqui podes adicionar algumas imagens do site para mostrar o design e estrutura.
+![image](https://github.com/user-attachments/assets/db6daa88-6633-4fc1-9ded-a17612f976b4)
 
 
 
 📬 Contacto
 Se quiseres entrar em contacto comigo, podes encontrar-me em:
 
-📧 Email: joaoevaristo.work@gmail.com
+📧 Email: joao.evaristo.work@gmail.com
 🔗 LinkedIn: João Evaristo
 🐙 GitHub: joaoevaristo11
 
