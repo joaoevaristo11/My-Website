@@ -1,8 +1,8 @@
-#📌 My Website - João Evaristo
+# 📌 My Website - João Evaristo
 
 🔗 [Access the website here](https://joaoevaristo11.github.io/My-Website/)
 
-##🖥️ About the Project
+# 🖥️ About the Project
 
 This is my personal portfolio, where I showcase my projects, skills, and experience in Computer Engineering, Networks, and Telecommunications.
 
@@ -10,7 +10,7 @@ The website was developed with a focus on:
 
 🎨 Frontend: HTML, CSS⚙️ Features: Modern and responsive design, intuitive navigation, and project highlights
 
-#🚀 Features
+# 🚀 Features
 
 ✅ Showcase of my projects and skills 📂✅ Direct links to GitHub, LinkedIn, and contact 📬✅ Modern and responsive interface 📱💻
 
