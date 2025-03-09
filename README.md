@@ -1,16 +1,19 @@
 📌 My Website - João Evaristo
 🔗 Acede ao site aqui
 
-
 🖥️ Sobre o Projeto
-Este é o meu portfólio pessoal, onde apresento os meus projetos, competências e experiência na área de Engenharia Informática, Redes e Telecomunicações. O site foi desenvolvido utilizando:
+Este é o meu portfólio pessoal, onde apresento os meus projetos, competências e experiência na área de Engenharia Informática, Redes e Telecomunicações.
 
-🖌️ Frontend: HTML, CSS
-⚙️ Funcionalidades: Design responsivo, navegação intuitiva e destaque para projetos em destaque
+O site foi desenvolvido com foco em:
+
+🎨 Frontend: HTML, CSS
+⚙️ Funcionalidades: Design moderno e responsivo, navegação intuitiva e destaque para projetos
 🚀 Funcionalidades
 ✅ Apresentação dos meus projetos e competências 📂
 ✅ Links diretos para GitHub, LinkedIn e contacto 📬
 ✅ Interface moderna e responsiva 📱💻
+
+
 
 🔧 Como Executar Localmente
 Se quiseres testar ou modificar o site, segue estes passos:
