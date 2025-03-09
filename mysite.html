@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Evaristo | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" onclick="window.location.reload();">
+                    <img src="images/Untitled image (4).png" class="logo" alt="João Evaristo Logo">
+                </a>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark close-icon" onclick="closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i> 
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>Computer Engineering Student | Software Developer | Network Engineer</p>
+            <h1>Hi, I'm <span>João Evaristo</span><br> a Computer Engineering student from Portugal</h1>
+        </div>
+        
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Me.png" alt="João Evaristo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm João Evaristo, a second-year university student pursuing a degree in Computer Engineering - Networks and Telecommunications at ISEL. 
+                        Since I was young, I have been passionate about video games, which led me to spend a lot of time on computers and, ultimately, 
+                        to choose this career path. My technical background includes software development (Java, Python, C), database management (SQL), 
+                        and networking (VLANs, Routing, Switching). I also have hands-on experience in network analysis and troubleshooting, using tools 
+                        like Wireshark, Packet Tracer, and GNS3.
+                    </p>
+                    <p><br>
+                        Apart from technology, I have always been a sports enthusiast, having practiced football, swimming, gym workouts, calisthenics, 
+                        and running. I am constantly striving to improve myself and feel like I am never quite where I should be, as if something is always missing. 
+                        My goal is to work for a major company in my field and, one day, build my own business.
+                    </p>
+    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Hard Skills</p>
+                        <p class="tab-links" onclick="opentab('soft-skills')">Soft Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">My Projects</p>
+                        <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
+                        <p class="tab-links" onclick="opentab('activities')">Extracurricular Activities</p>
+                    </div>
+    
+                    <!-- Hard Skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Software Development</span><br>Java, Python, C</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Network Engineering</span><br>Network configuration with Packet Tracer and GNS3</li>
+                            <li><span>Database Management</span><br>SQL, MySQL (basic)</li>
+                            <li><span>Productivity Tools</span><br>Microsoft Word, Excel (basic)</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Soft Skills -->
+                    <div class="tab-contents" id="soft-skills">
+                        <ul>
+                            <li><span>Problem-Solving</span><br>Strong analytical skills and a structured approach to challenges</li>
+                            <li><span>Discipline & Continuous Learning</span><br>Determined to improve and acquire new knowledge every day</li>
+                            <li><span>Teamwork</span><br>Collaborative mindset and ability to work effectively with others</li>
+                            <li><span>Positive Environment</span><br>Bringing motivation and a good atmosphere to the team</li>
+                            <li><span>Creativity</span><br>Innovative thinking and adaptability to new situations</li>
+                        </ul>
+                        
+                    </div>
+    
+                    <!-- Projects -->
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Minesweeper</span><br>Implementation of the classic Minesweeper game in Java</li>
+                            <li><span>To-Do List</span><br>Task management application in Java with JSON support</li>
+                            <li><span>Slot Machine</span><br>Slot machine simulator developed in Python for terminal</li>
+                            <li><span>BGP Configuration</span><br>Advanced BGP protocol configuration in GNS3</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Work Experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Freelancer at Andovar</span><br>Text translation and audio recording</li>
+                            <li><span>Private Tutor</span><br>Mathematics tutoring for primary and secondary students</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Extracurricular Activities -->
+                    <div class="tab-contents" id="activities">
+                        <ul>
+                            <li><span>Missão País 2025</span><br>Participated in the 2025 edition of Missão País, a volunteer program focused on community service and social impact.  
+                            Engaged in teamwork, public speaking, and organizing activities for local communities and charitable institutions.</li>
+                            <li><span>Catholic Student Group of FCUL (NEC-FCUL)</span><br>I actively participate in NEC-FCUL, where I develop interpersonal skills, engage in discussions 
+                            on faith and society, and take part in events and volunteer activities.</li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-- ---------------portfolio------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg" alt="Minesweeper">
+                    <div class="layer">
+                        <h3>Minesweeper Game</h3>
+                        <p>Implementation of the classic Minesweeper game in Java.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg" alt="To-Do List">
+                    <div class="layer">
+                        <h3>To-Do List</h3>
+                        <p>A Java application that stores tasks in a JSON file.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg" alt="GNS3">
+                    <div class="layer">
+                        <h3>GNS3 Project</h3>
+                        <p>Network configuration and analysis using GNS3.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    
+<!-- --------------contact-------------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-envelope"></i>evaristojoao11@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+351 935011957</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100009962471422&locale=pt_PT"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/joao_evaristo11_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/joão-evaristo-8663b2315/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/joaoevaristo11"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/João Evaristo.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name:">
+                    <input type="email" name="Email" placeholder="Your Email:">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © João Evaristo. Made with <i class="fa-solid fa-heart"></i> by João Evaristo</p>
+    </div>
+ </div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById('sidemenu');
+        var header = document.getElementById('header');
+        function openmenu(){
+            sidemenu.style.right = '0';
+        }
+        function closemenu(){
+            sidemenu.style.right = '-200px';
+        }
+    </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyFIZFeuGyTIYv8B5xidKRolM_bPwTv4_9oD0R_u_07HsqS7HcDox6T8ODTwcXqYwreTQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.createElement('p');
+        msg.style.color = 'green';
+        form.appendChild(msg);
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault() // Impede o reload da página
+          msg.textContent = 'Sending...'
+    
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                if (response.ok) {
+                    msg.textContent = 'Message sent sucessfully!'
+                    form.reset()
+                } else {
+                    msg.textContent = 'Error... Try again.'
+                    msg.style.color = 'red'
+                }
+            })
+            .catch(error => {
+                msg.textContent = 'Connection error!'
+                msg.style.color = 'red'
+                console.error('Error!', error.message)
+            })
+        })
+    </script>
+    
+
+</body>
+</html>
