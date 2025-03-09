@@ -1,49 +1,51 @@
-# 📌 My Website - João Evaristo  
-🔗 [Acede ao site aqui](https://joaoevaristo11.github.io/My-Website/)
+📌 My Website - João Evaristo
+
+🔗 Access the website here [
+
+🖥️ About the Project
+
+This is my personal portfolio, where I showcase my projects, skills, and experience in Computer Engineering, Networks, and Telecommunications.
+
+The website was developed with a focus on:
+
+🎨 Frontend: HTML, CSS⚙️ Features: Modern and responsive design, intuitive navigation, and project highlights
+
+🚀 Features
+
+✅ Showcase of my projects and skills 📂✅ Direct links to GitHub, LinkedIn, and contact 📬✅ Modern and responsive interface 📱💻
+
+🔧 How to Run Locally
+
+If you want to test or modify the website, follow these steps:
+
+Clone the repository
+
+git clone https://github.com/joaoevaristo11/My-Website.git  
+
+Access the project folder
+
+cd My-Website  
+
+Open index.html in a browser
+
+start index.html  
+
+📷 Screenshots
+
+💡 Here are some images showcasing the website’s design and structure:
 
 
-🖥️ Sobre o Projeto
-Este é o meu portfólio pessoal, onde apresento os meus projetos, competências e experiência na área de Engenharia Informática, Redes e Telecomunicações.
-
-O site foi desenvolvido com foco em:
-
-🎨 Frontend: HTML, CSS
-⚙️ Funcionalidades: Design moderno e responsivo, navegação intuitiva e destaque para projetos
-🚀 Funcionalidades
-✅ Apresentação dos meus projetos e competências 📂
-✅ Links diretos para GitHub, LinkedIn e contacto 📬
-✅ Interface moderna e responsiva 📱💻
 
 
 
-🔧 Como Executar Localmente
-Se quiseres testar ou modificar o site, segue estes passos:
 
-# Clonar o repositório
-git clone https://github.com/joaoevaristo11/My-Website.git
 
-# Aceder à pasta do projeto
-cd My-Website
 
-# Abrir o index.html num browser
-start index.html
 
-📷 Capturas de Ecrã
-💡 Aqui estão algumas imagens do site para mostrar o design e estrutura:
+📬 Contact
 
-![Captura de ecrã 2025-03-09 203554](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
+If you want to get in touch, you can find me at:
 
-![image](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
+📧 Email: joao.evaristo.work@gmail.com🔗 LinkedIn: João Evaristo🐙 GitHub: joaoevaristo11
 
-![image](https://github.com/user-attachments/assets/186d36f3-fd5c-4acb-8761-0f493055c620)
-
-![image](https://github.com/user-attachments/assets/e3a8dcab-90e0-4ce1-8395-263ca2ace06b)
-
-📬 Contacto
-Se quiseres entrar em contacto comigo, podes encontrar-me em:
-
-📧 Email: joao.evaristo.work@gmail.com
-🔗 LinkedIn: João Evaristo
-🐙 GitHub: joaoevaristo11
-
-💡 Gostaste do projeto? Dá um ⭐ no repositório e acompanha as atualizações!
+💡 Enjoyed the project? Give it a ⭐ on the repository and stay tuned for updates!
