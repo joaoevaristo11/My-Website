@@ -25,6 +25,8 @@ cd My-Website
 
 # Open index.html in a browser
 start index.html
+
+
 📷 Screenshots
 
 💡 Here are some images showcasing the website’s design and structure:
