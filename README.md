@@ -1,5 +1,6 @@
-📌 My Website - João Evaristo
-🔗 Acede ao site aqui
+# 📌 My Website - João Evaristo  
+🔗 [Acede ao site aqui](https://joaoevaristo11.github.io/My-Website/)
+
 
 🖥️ Sobre o Projeto
 Este é o meu portfólio pessoal, onde apresento os meus projetos, competências e experiência na área de Engenharia Informática, Redes e Telecomunicações.
@@ -28,6 +29,8 @@ cd My-Website
 start index.html
 
 📷 Capturas de Ecrã
+💡 Aqui estão algumas imagens do site para mostrar o design e estrutura:
+
 ![Captura de ecrã 2025-03-09 203554](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
 
 ![image](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
