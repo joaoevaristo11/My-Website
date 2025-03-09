@@ -27,7 +27,7 @@ cd My-Website
 start index.html
 
 
-📷 Screenshots
+# 📷 Screenshots
 
 💡 Here are some images showcasing the website’s design and structure:
 
@@ -41,7 +41,7 @@ start index.html
 
 
 
-📬 Contact
+# 📬 Contact
 
 If you want to get in touch, you can find me at:
 
