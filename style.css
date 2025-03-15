@@ -336,6 +336,11 @@ nav .fa-solid {
         font-size: 25px;
     }
 
+    nav .logo {
+        margin: 0 auto;
+        display: block;
+    }
+
     nav ul .fa-xmark {
         position: absolute;
         top: 25px;
