@@ -31,13 +31,13 @@ start index.html
 
 💡 Here are some images showcasing the website’s design and structure:
 
-![Captura de ecrã 2025-03-09 203554](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
+![Captura de ecrã 2025-05-02 203734.png](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
 
-![image](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
+![Captura de ecrã 2025-05-02 203746.png](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
 
-![image](https://github.com/user-attachments/assets/186d36f3-fd5c-4acb-8761-0f493055c620)
+![Captura de ecrã 2025-05-02 203805.png](https://github.com/user-attachments/assets/186d36f3-fd5c-4acb-8761-0f493055c620)
 
-![image](https://github.com/user-attachments/assets/e3a8dcab-90e0-4ce1-8395-263ca2ace06b)
+![Captura de ecrã 2025-05-02 203818.png](https://github.com/user-attachments/assets/e3a8dcab-90e0-4ce1-8395-263ca2ace06b)
 
 
 
