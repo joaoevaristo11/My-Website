@@ -8,7 +8,43 @@ This is my personal portfolio, where I showcase my projects, skills, and experie
 
 The website was developed with a focus on:
 
-🎨 Frontend: HTML, CSS⚙️ Features: Modern and responsive design, intuitive navigation, and project highlights
+🎨 Frontend: HTML, CSS  
+⚙️ Features: Modern and responsive design, intuitive navigation, and project highlights
+
+## 📁 Project Structure
+
+```
+My-Website/
+├── index.html              # Main HTML file (well-structured and commented)
+├── style.css               # Main CSS file (imports all modules)
+├── script.js               # JavaScript (interactive features)
+│
+├── css/                    # 📂 CSS Modules organized by section
+│   ├── base.css           # → Global styles and reset
+│   ├── header.css         # → Header Section (Hero + Navigation)
+│   ├── about.css          # → About Section (About me + Tabs)
+│   ├── portfolio.css      # → Portfolio Section (Projects)
+│   ├── contact.css        # → Contact Section (Form + Footer)
+│   └── responsive.css     # → Media queries (Mobile/Tablet)
+│
+├── images/                 # 🖼️ Images and graphics
+└── README.md              # 📄 Project documentation
+```
+
+### 🎯 Benefits of Modular Structure:
+✅ **Modularity** - CSS split by sections  
+✅ **Maintainability** - Easy to find and edit code  
+✅ **Organization** - Files with clear responsibilities  
+✅ **Scalability** - Easy to add new sections  
+
+### 🛠️ How to Edit:
+- **Header styles:** Edit `css/header.css`
+- **About styles:** Edit `css/about.css`
+- **Portfolio styles:** Edit `css/portfolio.css`
+- **Contact styles:** Edit `css/contact.css`
+- **Responsive design:** Edit `css/responsive.css`
+- **Content:** Edit `index.html` (look for section comments)
+- **JavaScript:** Edit `script.js`
 
 # 🚀 Features
 

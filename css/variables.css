@@ -1,0 +1,40 @@
+/* ==========================================
+   CSS VARIABLES - Paleta de Cores
+   ========================================== */
+
+:root {
+    /* Primary Colors */
+    --primary-cyan: #00e5ff;
+    --primary-purple: #8b5cf6;
+    --primary-dark: #0a0a0a;
+    
+    /* Background Colors */
+    --bg-black: #000000;
+    --bg-dark: #080808;
+    --bg-gray: #262626;
+    --bg-light-gray: #1a1a1a;
+    
+    /* Text Colors */
+    --text-white: #ffffff;
+    --text-gray: #959699;
+    --text-light-gray: #ababab;
+    --text-lavender: #a78bfa;
+    
+    /* Accent Colors */
+    --accent-cyan: rgba(0, 229, 255, 0.2);
+    --accent-purple: rgba(139, 92, 246, 0.3);
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #00e5ff, #8b5cf6);
+    --gradient-bg: linear-gradient(180deg, 
+        #000000 0%, 
+        #0a0a0a 10%,
+        #080808 50%, 
+        #0a0a0a 90%,
+        #000000 100%
+    );
+    
+    /* Shadows */
+    --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.5);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+}

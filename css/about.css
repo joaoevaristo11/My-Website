@@ -1,0 +1,134 @@
+/* ==========================================
+   ABOUT SECTION - Sobre Mim
+   ========================================== */
+
+#about{
+    padding: 80px 0;
+    color: #959699;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at top, rgba(0, 184, 212, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(124, 58, 237, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+#about .container{
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* About Columns */
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 184, 212, 0.2);
+    box-shadow: 0 0 20px rgba(0, 184, 212, 0.1), 0 0 35px rgba(124, 58, 237, 0.08);
+    transition: all 0.5s ease;
+}
+
+.about-col-1 img:hover{
+    border-color: rgba(0, 184, 212, 0.4);
+    box-shadow: 0 0 25px rgba(0, 184, 212, 0.2), 0 0 45px rgba(124, 58, 237, 0.15);
+    transform: translateY(-5px);
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* Tab Navigation */
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0, 184, 212, 0.7), rgba(124, 58, 237, 0.7));
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/* Tab Contents */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #9d87c7;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tab-contents{
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tab-contents.active-tab{
+    display: block;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

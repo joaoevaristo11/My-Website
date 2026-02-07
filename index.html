@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- ==========================================
+         HEADER SECTION - Página Inicial
+         ========================================== -->
     <div id="header">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="images/background_video.mp4" type="video/mp4">
+            <source src="images/background_video.webm" type="video/webm">
+            <!-- Fallback para browsers sem suporte a vídeo -->
+            Your browser does not support the video tag.
+        </video>
+        
         <div class="container">
+            <!-- Navigation Menu -->
             <nav>
-                <a href="#" onclick="window.location.reload();">
-                    <img src="images/Untitled image (4).png" class="logo" alt="João Evaristo Logo">
-                </a>
-                
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -25,11 +33,12 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i> 
             </nav>
         </div>
+        
+        <!-- Hero Text -->
         <div class="header-text">
             <p>Computer Engineering Student | Software Developer | Network Engineer</p>
-            <h1>Hi, I'm <span>João Evaristo</span><br> a Computer Engineering student from Portugal</h1>
+            <h1>Hi, I'm <span>João Evaristo</span><br><span class="typing-text" id="typingText"></span></h1>
         </div>
-        
     </div>
 
     <div id="about">
@@ -38,83 +47,68 @@
                 <div class="about-col-1">
                     <img src="images/EY-21.jpg" alt="João Evaristo">
                 </div>
+                
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        I'm João Evaristo, a second-year university student pursuing a degree in Computer Engineering - Networks and Telecommunications at ISEL. 
-                        Since I was young, I have been passionate about video games, which led me to spend a lot of time on computers and, ultimately, 
-                        to choose this career path. My technical background includes software development (Java, Python, C), database management (SQL), 
-                        and networking (VLANs, Routing, Switching). I also have hands-on experience in network analysis and troubleshooting, using tools 
-                        like Wireshark, Packet Tracer, and GNS3.
+                        I'm João Evaristo, a proactive final-year student in Network, Telecommunications & Software Engineering at ISEL. 
+                        I combine a strong academic foundation in Network Protocols and simulation tools (GNS3, Packet Tracer) with self-taught 
+                        software engineering skills. While my degree provided core knowledge in C, Java, and TCP/IP, I independently expanded 
+                        my skillset to master modern tools like Python, Docker, and the MERN stack.
                     </p>
                     <p><br>
-                        Apart from technology, I have always been a sports enthusiast, having practiced football, swimming, gym workouts, calisthenics, 
-                        and running. I am constantly striving to improve myself and feel like I am never quite where I should be, as if something is always missing. 
-                        My goal is to work for a major company in my field and, one day, build my own business.
+                        Beyond technology, I'm deeply passionate about sports and personal challenges. I've explored various disciplines throughout 
+                        my life — swimming, handball, basketball — but football captured my heart, where I competed as a federated athlete for over 
+                        7 years. Recently, I've discovered my love for fitness and running, having already completed a half marathon with ambitious 
+                        goals ahead. This athletic mindset reflects my approach to life: setting high targets and relentlessly pursuing them.
+                    </p>
+                    <p><br>
+                        My greatest ambition is to become one of the best in my field and, through my work, provide everything my family needs. 
+                        I am seeking a challenging opportunity to apply this hybrid profile, helping to build robust solutions while evolving 
+                        alongside experienced professionals and bridging the gap between reliable network infrastructure and scalable software architecture.
                     </p>
     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Hard Skills</p>
                         <p class="tab-links" onclick="opentab('soft-skills')">Soft Skills</p>
-                        <p class="tab-links" onclick="opentab('projects')">My Projects</p>
                         <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
                         <p class="tab-links" onclick="opentab('activities')">Extracurricular Activities</p>
                     </div>
     
-                    <!-- Hard Skills -->
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Software Development</span><br>Java, Python, C</li>
-                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
-                            <li><span>Network Engineering</span><br>Network configuration with Packet Tracer and GNS3</li>
-                            <li><span>Database Management</span><br>SQL, MySQL (basic)</li>
-                            <li><span>Productivity Tools</span><br>Microsoft Word, Excel (basic)</li>
+                            <li><span>Software Engineering</span><br>Java (Spring Boot), Python, C, OOP</li>
+                            <li><span>Full-Stack Development</span><br>MERN Stack (MongoDB, Express, React, Node.js), Tailwind CSS</li>
+                            <li><span>Network & DevOps</span><br>Docker, InfluxDB, GNS3, Packet Tracer, TCP/IP, Wireshark</li>
+                            <li><span>Database Management</span><br>MongoDB Atlas, SQL</li>
                         </ul>
                     </div>
     
-                    <!-- Soft Skills -->
                     <div class="tab-contents" id="soft-skills">
                         <ul>
-                            <li><span>Problem-Solving</span><br>Strong analytical skills and a structured approach to challenges</li>
-                            <li><span>Discipline & Continuous Learning</span><br>Determined to improve and acquire new knowledge every day</li>
-                            <li><span>Teamwork</span><br>Collaborative mindset and ability to work effectively with others</li>
-                            <li><span>Positive Environment</span><br>Bringing motivation and a good atmosphere to the team</li>
-                            <li><span>Creativity</span><br>Innovative thinking and adaptability to new situations</li>
+                            <li><span>Proactivity</span><br>Self-taught learner constantly expanding technical skillsets beyond the curriculum</li>
+                            <li><span>Problem-Solving</span><br>Strong analytical skills applied in debugging code and troubleshooting networks</li>
+                            <li><span>Teamwork & Leadership</span><br>Experience coordinating teams in volunteering and academic competitions</li>
+                            <li><span>Communication</span><br>Ability to explain technical concepts to different audiences (students, recruiters)</li>
+                            <li><span>Resilience</span><br>Developed through sports and community volunteering</li>
                         </ul>
                     </div>
     
-                    <!-- Projects -->
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span>Minesweeper</span><br>Implementation of the classic Minesweeper game in Java</li>
-                            <li><span>To-Do List</span><br>Task management application in Java with JSON support</li>
-                            <li><span>BGP Configuration</span><br>Advanced BGP protocol configuration in GNS3</li>
-                        </ul>
-                    </div>
-    
-                    <!-- Work Experience -->
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Freelancer at Andovar</span><br>Text translation and audio recording</li>
-                            <li><span>Private Tutor</span><br>Mathematics tutoring for primary and secondary students</li>
-                            <li><span>EY Ambassador</span><br>Representing EY among university students, promoting events, networking, and internship opportunities in IT and Consulting</li>
+                            <li><span>Freelance Translator (Andovar)</span><br>Delivered technical translations and audio recordings for international projects, enhancing my attention to detail, time management skills, and ability to work with diverse cultural contexts. This experience taught me the importance of precision in professional communication and meeting tight deadlines while maintaining quality standards (01/2025 - 03/2025).</li>
+                            <li><span>Independent Math Tutor</span><br>Mentoring students in problem-solving logic and mathematical concepts, developing my ability to break down complex topics into understandable parts and adapt my teaching methods to different learning styles. This role strengthened my patience, communication skills, and capacity to help others achieve their goals (10/2024 - Present).</li>
                         </ul>
                     </div>
 
-                    <!-- Extracurricular Activities -->
                     <div class="tab-contents" id="activities">
                         <ul>
-                            <li><span>Missão País 2025</span><br>Participated in the 2025 edition of Missão País, a volunteer program focused on community service and social impact.  
-                            Engaged in teamwork, public speaking, and organizing activities for local communities and charitable institutions.</li>
-                            <li><span>Catholic Student Group of FCUL (NEC-FCUL)</span><br>I actively participate in NEC-FCUL, where I develop interpersonal skills, engage in discussions 
-                            on faith and society, and take part in events and volunteer activities.</li>
-                            <li><span>Federated football athlete (2015-2022)</span><br>Federated football athlete, representing Grupo Desportivo de Samora Correia and AREPA (Porto Alto) in official 
-                            competitions under the Associação de Futebol de Santarém. Actively participated in national tournaments, gaining valuable experience in high-level competitive environments.
-                            Developed strong teamwork, leadership, resilience, and strategic thinking skills through years of dedication to the sport. Passionate about continuous improvement, discipline, 
-                            and achieving collective success on and off the field</li>
-                            <li><span>Futurália 2025</span><br>On March 28th and 29th, I had the amazing opportunity to represent ISEL - Instituto Superior de Engenharia de Lisboa at Futurália, Portugal's largest education and career fair.
-                                Engaging with prospective students, answering their questions, and sharing my experience in Computer Engineering - Networks and Telecommunications was incredibly rewarding. Seeing so many young minds eager to shape their future reminded me of my own journey into this field.
-                                Events like these highlight the importance of education, networking, and mentorship, and I'm grateful to have been part of it.</li>
+                            <li><span>EY Ambassador (Ernst & Young)</span><br>Selected to represent EY on campus, where I boost brand awareness and organize networking events. This role has enhanced my leadership, public speaking, and networking abilities, while teaching me how to bridge the gap between students and corporate culture. I've learned to effectively promote professional opportunities and create meaningful connections (03/2025 - Present).</li>
+                            <li><span>Federated Football Athlete</span><br>Competed as a federated football player for 7 years and 2 months with GDSC FC (Grupo Desportivo de Samora Correia) and AREPA. This experience taught me discipline, teamwork under pressure, strategic thinking, and the resilience needed to overcome challenges. Football shaped my competitive spirit and ability to work towards long-term goals with dedication and persistence.</li>
+                            <li><span>Fitness & Running Enthusiast</span><br>Recently discovered my passion for gym training and running, having already completed a half marathon. Currently training with ambitious goals to push my limits further in endurance sports. This commitment demonstrates my determination, self-discipline, and drive to continuously challenge myself and achieve excellence in every area I pursue.</li>
+                            <li><span>TechStorm '26</span><br>Team project selected for competition, currently developing an innovative solution to combat Deepfakes. This experience is strengthening my teamwork, innovation mindset, and ability to tackle real-world technological challenges while working under pressure and tight deadlines.</li>
+                            <li><span>Missão País (2025 & 2026)</span><br>Participated in this impactful university volunteering project serving isolated local communities across Portugal. Living and working intensely with a team for a week taught me resilience, adaptability, empathy, and the value of giving back to society. It reinforced my teamwork skills and showed me the importance of stepping outside my comfort zone to make a real difference.</li>
+                            <li><span>Futurália Representative</span><br>Selected as a speaker to represent ISEL's engineering courses to prospective students at one of Portugal's largest education fairs. This experience developed my public speaking confidence, ability to inspire others, and skills in presenting technical information to diverse audiences in an engaging and accessible way.</li>
                         </ul>
                     </div>
                 </div>
@@ -122,54 +116,62 @@
         </div>
     </div>
     
-    
-<!-- ---------------portfolio------------- -->
-
+    <!-- ==========================================
+         PORTFOLIO SECTION - Projetos
+         ========================================== -->
     <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
+            
+            <!-- Project Cards Grid -->
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.jpg" alt="Minesweeper">
+                    <img src="https://www.taste.io/_next/image?url=%2Fimages%2Fhero.jpg&w=3840&q=75" alt="JustTakes">
                     <div class="layer">
-                        <h3>Minesweeper Game</h3>
-                        <p>Implementation of the classic Minesweeper game in Java.</p>
-                        <a href="https://github.com/joaoevaristo11/MinesweeperJava" target="_blank">
+                        <h3>JustTakes</h3>
+                        <p>Full-Stack MERN platform for tracking and reviewing movies, series, books, and games with social features.</p>
+                        <a href="https://github.com/joaoevaristo11/justtakes" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div class="work">
-                    <img src="images/work-2.jpg" alt="To-Do List">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/035/086/233/small/ai-generated-it-technician-monitoring-network-in-system-control-center-photo.jpeg" alt="EchoState">
                     <div class="layer">
-                        <h3>To-Do List</h3>
-                        <p>A Java application that stores tasks in a JSON file.</p>
-                        <a href="https://github.com/joaoevaristo11/ToDoList-Java" target="_blank">
+                        <h3>EchoState</h3>
+                        <p>Distributed network monitoring system with Spring Boot, Python, Docker, InfluxDB and Grafana for real-time observability.</p>
+                        <a href="https://github.com/joaoevaristo11/EchoState" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div class="work">
-                    <img src="images/work-3.jpg" alt="GNS3">
+                    <img src="images/minesweeper.png" alt="Minesweeper">
                     <div class="layer">
-                        <h3>Python Projects</h3>
-                        <p>Little projects i developed while learning python on my own.</p>
-                        <a href="https://github.com/joaoevaristo11/PythonProjects" target="_blank">
+                        <h3>Minesweeper Game</h3>
+                        <p>Classic Minesweeper in Java with GUI, multiple difficulty levels, timer system and leaderboard with data persistence.</p>
+                        <a href="https://github.com/joaoevaristo11/MinesweeperJava" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
             </div>
+            
+            <!-- GitHub Link -->
             <a href="https://github.com/joaoevaristo11" class="btn">See more</a>
         </div>
     </div>
     
-<!-- --------------contact-------------- -->
- <div id="contact">
+    <!-- ==========================================
+         CONTACT SECTION - Contactos
+         ========================================== -->
+    <div id="contact">
     <div class="container">
-        <div class="row">
-            <div class="contact-left">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="contact-left">
                 <h1 class="sub-title">Contact me</h1>
                 <p><i class="fa-solid fa-envelope"></i>joao.evaristo.work@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i>+351 935011957</p>
@@ -179,77 +181,28 @@
                     <a href="https://www.linkedin.com/in/joão-evaristo-8663b2315/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/joaoevaristo11"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="images/João Evaristo - CV.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name:">
-                    <input type="email" name="Email" placeholder="Your Email:">
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
+                <a href="images/CV - João Daniel Evaristo - ENG.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name:">
+                        <input type="email" name="Email" placeholder="Your Email:">
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
+        
+        <!-- Footer -->
+        <div class="copyright">
+            <p>Copyright © João Evaristo. Made with <i class="fa-solid fa-heart"></i> by João Evaristo</p>
+        </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © João Evaristo. Made with <i class="fa-solid fa-heart"></i> by João Evaristo</p>
-    </div>
- </div>
-    <script>
-        var tablinks = document.getElementsByClassName('tab-links');
-        var tabcontents = document.getElementsByClassName('tab-contents');
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove('active-link');
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove('active-tab');
-            }
-            event.currentTarget.classList.add('active-link');
-            document.getElementById(tabname).classList.add('active-tab');
-        }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById('sidemenu');
-        var header = document.getElementById('header');
-        function openmenu(){
-            sidemenu.style.right = '0';
-        }
-        function closemenu(){
-            sidemenu.style.right = '-200px';
-        }
-    </script>
     
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyFIZFeuGyTIYv8B5xidKRolM_bPwTv4_9oD0R_u_07HsqS7HcDox6T8ODTwcXqYwreTQ/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.createElement('p');
-        msg.style.color = 'green';
-        form.appendChild(msg);
-    
-        form.addEventListener('submit', e => {
-          e.preventDefault() // Impede o reload da página
-          msg.textContent = 'Sending...'
-    
-          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                if (response.ok) {
-                    msg.textContent = 'Message sent sucessfully!'
-                    form.reset()
-                } else {
-                    msg.textContent = 'Error... Try again.'
-                    msg.style.color = 'red'
-                }
-            })
-            .catch(error => {
-                msg.textContent = 'Connection error!'
-                msg.style.color = 'red'
-                console.error('Error!', error.message)
-            })
-        })
-    </script>
-    
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

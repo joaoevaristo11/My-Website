@@ -1,0 +1,326 @@
+/* ==========================================
+   CYBERPUNK SCROLL ANIMATIONS
+   Dark Tech Aesthetic with Neon Effects
+   ========================================== */
+
+/* ==========================================
+   KEYFRAMES - Definição das Animações
+   ========================================== */
+
+/* Fade In com Slide Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In com Slide Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In com Slide Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In com Fade */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Glitch Effect para Títulos */
+@keyframes glitch {
+    0% {
+        text-shadow: 
+            2px 2px 0 var(--primary-cyan),
+            -2px -2px 0 var(--primary-purple);
+    }
+    25% {
+        text-shadow: 
+            -2px 2px 0 var(--primary-cyan),
+            2px -2px 0 var(--primary-purple);
+    }
+    50% {
+        text-shadow: 
+            2px -2px 0 var(--primary-cyan),
+            -2px 2px 0 var(--primary-purple);
+    }
+    75% {
+        text-shadow: 
+            -2px -2px 0 var(--primary-cyan),
+            2px 2px 0 var(--primary-purple);
+    }
+    100% {
+        text-shadow: 
+            2px 2px 0 var(--primary-cyan),
+            -2px -2px 0 var(--primary-purple);
+    }
+}
+
+/* Neon Glow Pulse */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px var(--primary-cyan),
+            0 0 10px var(--primary-cyan),
+            0 0 20px var(--primary-cyan),
+            0 0 40px var(--primary-cyan);
+    }
+    50% {
+        text-shadow: 
+            0 0 2px var(--primary-cyan),
+            0 0 5px var(--primary-cyan),
+            0 0 10px var(--primary-cyan),
+            0 0 20px var(--primary-cyan);
+    }
+}
+
+/* Scan Line Effect */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Border Glow Animation */
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 10px rgba(0, 184, 212, 0.1),
+            inset 0 0 15px rgba(0, 184, 212, 0.03);
+    }
+    50% {
+        box-shadow: 
+            0 0 20px rgba(0, 184, 212, 0.25),
+            0 0 35px rgba(124, 58, 237, 0.15);
+    }
+}
+
+/* Data Stream Effect */
+@keyframes dataStream {
+    0% {
+        background-position: 0% 0%;
+        opacity: 0.3;
+    }
+    100% {
+        background-position: 100% 100%;
+        opacity: 0.6;
+    }
+}
+
+/* Rotate In */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* ==========================================
+   CLASSES DE ANIMAÇÃO - Aplicar nos Elementos
+   ========================================== */
+
+/* Estado Inicial - Elementos Ocultos */
+.scroll-hidden {
+    opacity: 0;
+}
+
+/* Botão sempre visível */
+#portfolio .btn {
+    opacity: 1 !important;
+}
+
+/* Fade In Up Animation */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Fade In Left Animation */
+.fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+/* Fade In Right Animation */
+.fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+}
+
+/* Scale In Animation */
+.scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Rotate In Animation */
+.rotate-in {
+    animation: rotateIn 0.6s ease-out forwards;
+}
+
+/* Glitch Effect para Títulos (activado no hover e scroll) */
+.glitch-effect {
+    animation: glitch 0.3s ease-in-out;
+}
+
+/* Neon Pulse Contínuo */
+.neon-pulse {
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   DELAYS - Stagger Effect (aparecer em cascata)
+   ========================================== */
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ==========================================
+   EFEITOS ESPECIAIS - Cyberpunk Tech
+   ========================================== */
+
+/* Scan Line Overlay */
+.scanline-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary-cyan),
+        transparent
+    );
+    animation: scanline 3s linear infinite;
+    opacity: 0.5;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Border Glow Effect */
+.border-glow {
+    animation: borderGlow 2s ease-in-out infinite;
+}
+
+/* Data Stream Background */
+.data-stream::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, 
+            transparent 30%, 
+            rgba(0, 229, 255, 0.05) 50%, 
+            transparent 70%
+        );
+    background-size: 200% 200%;
+    animation: dataStream 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Hover Effects Cyberpunk */
+.cyber-hover {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cyber-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 10px 30px rgba(0, 229, 255, 0.3),
+        0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.cyber-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 229, 255, 0.1),
+        rgba(139, 92, 246, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.cyber-hover:hover::after {
+    opacity: 1;
+}
+
+/* Glitch no Hover de Títulos */
+.title-glitch:hover {
+    animation: glitch 0.3s ease-in-out;
+}
+
+/* ==========================================
+   RESPONSIVE - Mobile Adjustments
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    /* Animações mais suaves em mobile */
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .scale-in,
+    .rotate-in {
+        animation-duration: 0.5s;
+    }
+    
+    /* Reduzir delays em mobile */
+    .delay-100 { animation-delay: 0.05s; }
+    .delay-200 { animation-delay: 0.1s; }
+    .delay-300 { animation-delay: 0.15s; }
+    .delay-400 { animation-delay: 0.2s; }
+    .delay-500 { animation-delay: 0.25s; }
+    .delay-600 { animation-delay: 0.3s; }
+    .delay-700 { animation-delay: 0.35s; }
+    .delay-800 { animation-delay: 0.4s; }
+}
