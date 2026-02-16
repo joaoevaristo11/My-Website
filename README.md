@@ -1,87 +1,281 @@
-# 📌 My Website - João Evaristo
+<div align="center">
 
-🔗 [Access the website here](https://joaoevaristo11.github.io/My-Website/)
+# João Evaristo | Professional Portfolio
 
-# 🖥️ About the Project
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=github)](https://joaoevaristo11.github.io/My-Website/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/joaoevaristo11/My-Website)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
-This is my personal portfolio, where I showcase my projects, skills, and experience in Computer Engineering, Networks, and Telecommunications.
+**A modern, responsive portfolio website showcasing my work in Computer Engineering, Software Development, and Network Engineering.**
 
-The website was developed with a focus on:
+[View Live Demo](https://joaoevaristo11.github.io/My-Website/) • [Report Bug](https://github.com/joaoevaristo11/My-Website/issues) • [Request Feature](https://github.com/joaoevaristo11/My-Website/issues)
 
-🎨 Frontend: HTML, CSS  
-⚙️ Features: Modern and responsive design, intuitive navigation, and project highlights
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Architecture](#-architecture)
+- [Screenshots](#-screenshots)
+- [Roadmap](#-roadmap)
+- [Contact](#-contact)
+
+---
+
+## 🎯 Overview
+
+This portfolio website serves as a comprehensive showcase of my professional work, technical skills, and project portfolio. Built with clean, semantic HTML5, modular CSS architecture, and vanilla JavaScript, it demonstrates best practices in modern web development.
+
+### Purpose
+- **Professional Presence**: Establish a strong online presence for career opportunities
+- **Project Showcase**: Display my technical projects with detailed descriptions and live demos
+- **Skills Demonstration**: Highlight proficiency in Computer Engineering, Networks, and Software Development
+- **Contact Hub**: Provide an accessible platform for professional networking
+
+---
+
+## ✨ Key Features
+
+### 🎨 User Experience
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
+- **Video Background**: Dynamic video hero section for visual impact
+- **Smooth Animations**: CSS transitions and JavaScript interactions for enhanced UX
+- **Interactive Navigation**: Mobile-friendly hamburger menu with smooth scrolling
+
+### 🛠️ Technical Implementation
+- **Modular CSS Architecture**: Organized stylesheets by component for maintainability
+- **Semantic HTML5**: Structured markup following web standards
+- **Vanilla JavaScript**: No framework dependencies, optimized performance
+- **Cross-Browser Compatible**: Tested across modern browsers
+- **Fast Loading**: Optimized assets and efficient code structure
+
+### 📱 Sections
+- **Hero Section**: Eye-catching introduction with dynamic typing effect
+- **About**: Professional background, skills, and education tabs
+- **Portfolio**: Featured projects with descriptions and links
+- **Contact**: Interactive form and social media integration
+
+---
+
+## 🚀 Tech Stack
+
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)
+
+</div>
+
+### Core Technologies
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Modern styling with Flexbox and Grid layouts
+- **JavaScript (ES6+)**: Interactive features and DOM manipulation
+- **Font Awesome 6**: Professional iconography
+
+### Development Tools
+- **Git**: Version control
+- **GitHub Pages**: Hosting and deployment
+- **VS Code**: Primary development environment
+
+---
 
 ## 📁 Project Structure
 
 ```
 My-Website/
-├── index.html              # Main HTML file (well-structured and commented)
-├── style.css               # Main CSS file (imports all modules)
-├── script.js               # JavaScript (interactive features)
 │
-├── css/                    # 📂 CSS Modules organized by section
-│   ├── base.css           # → Global styles and reset
-│   ├── header.css         # → Header Section (Hero + Navigation)
-│   ├── about.css          # → About Section (About me + Tabs)
-│   ├── portfolio.css      # → Portfolio Section (Projects)
-│   ├── contact.css        # → Contact Section (Form + Footer)
-│   └── responsive.css     # → Media queries (Mobile/Tablet)
+├── index.html                 # Main HTML document
+├── style.css                  # CSS module orchestrator (imports all modules)
+├── script.js                  # JavaScript functionality
+├── README.md                  # Project documentation
 │
-├── images/                 # 🖼️ Images and graphics
-└── README.md              # 📄 Project documentation
+├── css/                       # Modular CSS architecture
+│   ├── variables.css          # → CSS custom properties (colors, spacing, etc.)
+│   ├── base.css               # → Global resets and base styles
+│   ├── animations.css         # → Keyframes and animation definitions
+│   ├── header.css             # → Hero section and navigation styles
+│   ├── about.css              # → About section (bio, tabs, skills)
+│   ├── portfolio.css          # → Portfolio grid and project cards
+│   ├── contact.css            # → Contact form and footer
+│   └── responsive.css         # → Media queries for all breakpoints
+│
+└── images/                    # Media assets
+    ├── background_video.mp4   # Hero section video
+    ├── profile.jpg            # Personal photo
+    └── [project images]       # Portfolio thumbnails
 ```
 
-### 🎯 Benefits of Modular Structure:
-✅ **Modularity** - CSS split by sections  
-✅ **Maintainability** - Easy to find and edit code  
-✅ **Organization** - Files with clear responsibilities  
-✅ **Scalability** - Easy to add new sections  
+### Architecture Benefits
 
-### 🛠️ How to Edit:
-- **Header styles:** Edit `css/header.css`
-- **About styles:** Edit `css/about.css`
-- **Portfolio styles:** Edit `css/portfolio.css`
-- **Contact styles:** Edit `css/contact.css`
-- **Responsive design:** Edit `css/responsive.css`
-- **Content:** Edit `index.html` (look for section comments)
-- **JavaScript:** Edit `script.js`
+| Benefit | Description |
+|---------|-------------|
+| **Modularity** | Each CSS file handles a specific section, reducing cognitive load |
+| **Maintainability** | Changes to one section don't affect others, easier debugging |
+| **Scalability** | New sections can be added by creating new CSS modules |
+| **Collaboration** | Multiple developers can work on different modules simultaneously |
+| **Performance** | Easier to identify and remove unused styles |
 
-# 🚀 Features
+---
 
-✅ Showcase of my projects and skills 📂✅ Direct links to GitHub, LinkedIn, and contact 📬✅ Modern and responsive interface 📱💻
+## 🏃 Getting Started
 
-🔧 How to Run Locally
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Basic understanding of HTML/CSS/JS (for modifications)
 
-If you want to test or modify the website, follow these steps: 
-# Clone the repository
-git clone https://github.com/joaoevaristo11/My-Website.git
+### Installation
 
-# Access the project folder
-cd My-Website
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/joaoevaristo11/My-Website.git
+   ```
 
-# Open index.html in a browser
-start index.html
+2. **Navigate to the project directory**
+   ```bash
+   cd My-Website
+   ```
 
+3. **Open in browser**
+   ```bash
+   # Windows
+   start index.html
 
-# 📷 Screenshots
+   # macOS
+   open index.html
 
-💡 Here are some images showcasing the website’s design and structure:
+   # Linux
+   xdg-open index.html
+   ```
 
-![Captura de ecrã 2025-05-02 203734.png](https://github.com/user-attachments/assets/c1fdb93b-167d-463a-b74b-1107513d9ae7)
+### Local Development
 
-![Captura de ecrã 2025-05-02 203746.png](https://github.com/user-attachments/assets/64d353f5-a695-404b-8825-522077de2d17)
+For live reloading during development, use a local server:
 
-![Captura de ecrã 2025-05-02 203805.png](https://github.com/user-attachments/assets/186d36f3-fd5c-4acb-8761-0f493055c620)
+```bash
+# Using Python 3
+python -m http.server 8000
 
-![Captura de ecrã 2025-05-02 203818.png](https://github.com/user-attachments/assets/e3a8dcab-90e0-4ce1-8395-263ca2ace06b)
+# Using Node.js (http-server)
+npx http-server -p 8000
 
+# Using VS Code Live Server extension
+# Right-click index.html → "Open with Live Server"
+```
 
+Then navigate to `http://localhost:8000`
 
-# 📬 Contact
+---
 
-If you want to get in touch, you can find me at:
+## 🏗️ Architecture
 
-📧 Email: joao.evaristo.work@gmail.com
-🔗 LinkedIn: João Evaristo
-🐙 GitHub: joaoevaristo11
-💡 Enjoyed the project? Give it a ⭐ on the repository and stay tuned for updates!
+### CSS Module System
+
+The stylesheet architecture follows a **modular approach** where `style.css` acts as the orchestrator:
+
+```css
+/* style.css - Module Orchestrator */
+@import url('css/variables.css');    /* Design tokens */
+@import url('css/base.css');         /* Global styles */
+@import url('css/animations.css');   /* Reusable animations */
+@import url('css/header.css');       /* Header component */
+@import url('css/about.css');        /* About component */
+@import url('css/portfolio.css');    /* Portfolio component */
+@import url('css/contact.css');      /* Contact component */
+@import url('css/responsive.css');   /* Media queries */
+```
+
+### Customization Guide
+
+#### Modifying Styles
+| Component | File | Description |
+|-----------|------|-------------|
+| Colors & Spacing | `css/variables.css` | Design system tokens |
+| Global Styles | `css/base.css` | Typography, resets |
+| Hero Section | `css/header.css` | Video background, navigation |
+| About Section | `css/about.css` | Bio, tabs, skills |
+| Portfolio Grid | `css/portfolio.css` | Project cards |
+| Contact Form | `css/contact.css` | Form styling, footer |
+| Mobile/Tablet | `css/responsive.css` | Breakpoints and adjustments |
+
+#### Modifying Content
+- **Text & Images**: Edit `index.html` (sections are clearly commented)
+- **Interactivity**: Edit `script.js` (form handling, menu toggle, typing effect)
+
+---
+
+## 📷 Screenshots
+
+### Desktop View
+![Header Section](images/header.png)
+
+### About Section
+![About Section](images/about.png)
+
+### Portfolio Grid
+![Portfolio Section](images/portfolio.png)
+
+### Contact Section
+![Contact Section](images/contact.png)
+
+---
+
+## 🗺️ Roadmap
+
+### Planned Features
+- [ ] Dark/Light theme toggle
+- [ ] Multi-language support (Portuguese/English)
+- [ ] Blog section for technical articles
+- [ ] Accessibility improvements (WCAG 2.1 AA compliance)
+- [ ] Performance optimization (lazy loading, WebP images)
+- [ ] SEO enhancements (structured data, meta tags)
+- [ ] Integration with Google Analytics
+- [ ] Downloadable CV/Resume button
+
+### Completed
+- [x] Responsive design
+- [x] Video background
+- [x] Interactive portfolio section
+- [x] Contact form
+- [x] Mobile navigation
+
+---
+
+## 📬 Contact
+
+**João Evaristo**  
+Computer Engineering Student | Software Developer | Network Engineer
+
+[![Email](https://img.shields.io/badge/Email-joao.evaristo.work@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joao.evaristo.work@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-João_Evaristo-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/joão-evaristo)
+[![GitHub](https://img.shields.io/badge/GitHub-joaoevaristo11-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/joaoevaristo11)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🌟 Support
+
+If you found this project helpful or interesting, please consider:
+- ⭐ **Starring the repository**
+- 🐛 **Reporting issues** for bugs or improvements
+- 🔄 **Sharing** with others who might benefit
+
+---
+
+<div align="center">
+
+**Built with ❤️ by [João Evaristo](https://github.com/joaoevaristo11)**
+
+</div>
