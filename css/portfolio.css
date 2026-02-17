@@ -9,6 +9,11 @@
     overflow: hidden;
 }
 
+#portfolio .sub-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 #portfolio::before{
     content: '';
     position: absolute;
@@ -171,4 +176,22 @@
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.4s;
+}
+
+/* Touch Device Support - Show layer on tap */
+@media (hover: none) and (pointer: coarse) {
+    .work.active .layer {
+        height: 100%;
+    }
+    
+    .work.active .layer h3,
+    .work.active .layer p,
+    .work.active .layer a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .work.active img {
+        transform: scale(1.15);
+    }
 }

@@ -2,18 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="João Evaristo - Computer Engineering Student, Software Developer & Network Engineer. Portfolio showcasing projects in MERN stack, Java, Python, Docker, and network infrastructure.">
+    <meta name="keywords" content="João Evaristo, Computer Engineering, Software Developer, Network Engineer, MERN Stack, Java, Python, Docker, Portfolio, ISEL">
+    <meta name="author" content="João Evaristo">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="João Evaristo | Portfolio">
+    <meta property="og:description" content="Computer Engineering Student | Software Developer | Network Engineer - Building robust solutions between network infrastructure and scalable software architecture.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joaoevaristo11.github.io/My-Website/">
+    <meta property="og:image" content="https://joaoevaristo11.github.io/My-Website/images/EY-21.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="João Evaristo | Portfolio">
+    <meta name="twitter:description" content="Computer Engineering Student | Software Developer | Network Engineer">
+    <meta name="twitter:image" content="https://joaoevaristo11.github.io/My-Website/images/EY-21.jpg">
+    
     <title>João Evaristo | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Menu Overlay -->
+    <div id="menu-overlay" onclick="closemenu()" role="presentation" aria-hidden="true"></div>
+    
     <!-- ==========================================
          HEADER SECTION - Página Inicial
          ========================================== -->
-    <div id="header">
+    <header id="header">
         <!-- Background Video -->
-        <video autoplay muted loop playsinline id="bgVideo">
+        <video autoplay muted loop playsinline id="bgVideo" preload="metadata" poster="images/background_video_poster.jpg" aria-hidden="true">
             <source src="images/background_video.mp4" type="video/mp4">
             <source src="images/background_video.webm" type="video/webm">
             <!-- Fallback para browsers sem suporte a vídeo -->
@@ -22,34 +48,38 @@
         
         <div class="container">
             <!-- Navigation Menu -->
-            <nav>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark close-icon" onclick="closemenu()"></i> 
+            <nav role="navigation" aria-label="Main navigation">
+                <ul id="sidemenu" role="menubar">
+                    <li role="none"><a href="#header" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                    <button class="menu-close" onclick="closemenu()" aria-label="Close navigation menu">
+                        <i class="fa-solid fa-xmark close-icon" aria-hidden="true"></i>
+                    </button>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i> 
+                <button class="menu-toggle" onclick="openmenu()" aria-label="Open navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button> 
             </nav>
         </div>
         
         <!-- Hero Text -->
         <div class="header-text">
             <p>Computer Engineering Student | Software Developer | Network Engineer</p>
-            <h1>Hi, I'm <span>João Evaristo</span><br><span class="typing-text" id="typingText"></span></h1>
+            <h1>Hi, I'm <span>João Evaristo</span><br><span class="typing-text" id="typingText" aria-live="polite"></span></h1>
         </div>
-    </div>
+    </header>
 
-    <div id="about">
+    <section id="about" aria-labelledby="about-title">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/EY-21.jpg" alt="João Evaristo">
+                    <img src="images/EY-21.jpg" alt="João Evaristo professional photo at Ernst & Young event" loading="lazy">
                 </div>
                 
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
+                    <h1 class="sub-title" id="about-title">About Me</h1>
                     <p>
                         I'm João Evaristo, a proactive final-year student in Network, Telecommunications & Software Engineering at ISEL. 
                         I combine a strong academic foundation in Network Protocols and simulation tools (GNS3, Packet Tracer) with self-taught 
@@ -68,14 +98,14 @@
                         alongside experienced professionals and bridging the gap between reliable network infrastructure and scalable software architecture.
                     </p>
     
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Hard Skills</p>
-                        <p class="tab-links" onclick="opentab('soft-skills')">Soft Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
-                        <p class="tab-links" onclick="opentab('activities')">Extracurricular Activities</p>
+                    <div class="tab-titles" role="tablist" aria-label="About me sections">
+                        <button class="tab-links active-link" onclick="opentab('skills', event)" role="tab" aria-selected="true" aria-controls="skills" id="tab-skills">Hard Skills</button>
+                        <button class="tab-links" onclick="opentab('soft-skills', event)" role="tab" aria-selected="false" aria-controls="soft-skills" id="tab-soft-skills">Soft Skills</button>
+                        <button class="tab-links" onclick="opentab('experience', event)" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience">Work Experience</button>
+                        <button class="tab-links" onclick="opentab('activities', event)" role="tab" aria-selected="false" aria-controls="activities" id="tab-activities">Extracurricular Activities</button>
                     </div>
     
-                    <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
                         <ul>
                             <li><span>Software Engineering</span><br>Java (Spring Boot), Python, C, OOP</li>
                             <li><span>Full-Stack Development</span><br>MERN Stack (MongoDB, Express, React, Node.js), Tailwind CSS</li>
@@ -84,7 +114,7 @@
                         </ul>
                     </div>
     
-                    <div class="tab-contents" id="soft-skills">
+                    <div class="tab-contents" id="soft-skills" role="tabpanel" aria-labelledby="tab-soft-skills" hidden>
                         <ul>
                             <li><span>Proactivity</span><br>Self-taught learner constantly expanding technical skillsets beyond the curriculum</li>
                             <li><span>Problem-Solving</span><br>Strong analytical skills applied in debugging code and troubleshooting networks</li>
@@ -94,14 +124,14 @@
                         </ul>
                     </div>
     
-                    <div class="tab-contents" id="experience">
+                    <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience" hidden>
                         <ul>
                             <li><span>Freelance Translator (Andovar)</span><br>Delivered technical translations and audio recordings for international projects, enhancing my attention to detail, time management skills, and ability to work with diverse cultural contexts. This experience taught me the importance of precision in professional communication and meeting tight deadlines while maintaining quality standards (01/2025 - 03/2025).</li>
                             <li><span>Independent Math Tutor</span><br>Mentoring students in problem-solving logic and mathematical concepts, developing my ability to break down complex topics into understandable parts and adapt my teaching methods to different learning styles. This role strengthened my patience, communication skills, and capacity to help others achieve their goals (10/2024 - Present).</li>
                         </ul>
                     </div>
 
-                    <div class="tab-contents" id="activities">
+                    <div class="tab-contents" id="activities" role="tabpanel" aria-labelledby="tab-activities" hidden>
                         <ul>
                             <li><span>EY Ambassador (Ernst & Young)</span><br>Selected to represent EY on campus, where I boost brand awareness and organize networking events. This role has enhanced my leadership, public speaking, and networking abilities, while teaching me how to bridge the gap between students and corporate culture. I've learned to effectively promote professional opportunities and create meaningful connections (03/2025 - Present).</li>
                             <li><span>Federated Football Athlete</span><br>Competed as a federated football player for 7 years and 2 months with GDSC FC (Grupo Desportivo de Samora Correia) and AREPA. This experience taught me discipline, teamwork under pressure, strategic thinking, and the resilience needed to overcome challenges. Football shaped my competitive spirit and ability to work towards long-term goals with dedication and persistence.</li>
@@ -114,82 +144,90 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
     <!-- ==========================================
          PORTFOLIO SECTION - Projetos
          ========================================== -->
-    <div id="portfolio">
+    <section id="portfolio" aria-labelledby="portfolio-title">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title" id="portfolio-title">My Work</h1>
             
             <!-- Project Cards Grid -->
             <div class="work-list">
-                <div class="work">
-                    <img src="https://www.taste.io/_next/image?url=%2Fimages%2Fhero.jpg&w=3840&q=75" alt="JustTakes">
+                <article class="work">
+                    <img src="https://www.taste.io/_next/image?url=%2Fimages%2Fhero.jpg&w=3840&q=75" alt="JustTakes - Movie and series tracking platform interface" loading="lazy">
                     <div class="layer">
                         <h3>JustTakes</h3>
                         <p>Full-Stack MERN platform for tracking and reviewing movies, series, books, and games with social features.</p>
-                        <a href="https://github.com/joaoevaristo11/justtakes" target="_blank">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://github.com/joaoevaristo11/justtakes" target="_blank" rel="noopener noreferrer" aria-label="View JustTakes project on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         </a>
                     </div>
-                </div>
+                </article>
                 
-                <div class="work">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/035/086/233/small/ai-generated-it-technician-monitoring-network-in-system-control-center-photo.jpeg" alt="EchoState">
+                <article class="work">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/035/086/233/small/ai-generated-it-technician-monitoring-network-in-system-control-center-photo.jpeg" alt="EchoState - Network monitoring system dashboard" loading="lazy">
                     <div class="layer">
                         <h3>EchoState</h3>
                         <p>Distributed network monitoring system with Spring Boot, Python, Docker, InfluxDB and Grafana for real-time observability.</p>
-                        <a href="https://github.com/joaoevaristo11/EchoState" target="_blank">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://github.com/joaoevaristo11/EchoState" target="_blank" rel="noopener noreferrer" aria-label="View EchoState project on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         </a>
                     </div>
-                </div>
+                </article>
                 
-                <div class="work">
-                    <img src="images/minesweeper.png" alt="Minesweeper">
+                <article class="work">
+                    <img src="images/minesweeper.png" alt="Minesweeper game interface with timer and leaderboard" loading="lazy">
                     <div class="layer">
                         <h3>Minesweeper Game</h3>
                         <p>Classic Minesweeper in Java with GUI, multiple difficulty levels, timer system and leaderboard with data persistence.</p>
-                        <a href="https://github.com/joaoevaristo11/MinesweeperJava" target="_blank">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://github.com/joaoevaristo11/MinesweeperJava" target="_blank" rel="noopener noreferrer" aria-label="View Minesweeper project on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         </a>
                     </div>
-                </div>
+                </article>
             </div>
             
             <!-- GitHub Link -->
-            <a href="https://github.com/joaoevaristo11" class="btn">See more</a>
+            <a href="https://github.com/joaoevaristo11" class="btn" target="_blank" rel="noopener noreferrer">See more</a>
         </div>
-    </div>
+    </section>
     
     <!-- ==========================================
          CONTACT SECTION - Contactos
          ========================================== -->
-    <div id="contact">
+    <section id="contact" aria-labelledby="contact-title">
     <div class="container">
             <div class="row">
                 <!-- Contact Information -->
                 <div class="contact-left">
-                <h1 class="sub-title">Contact me</h1>
-                <p><i class="fa-solid fa-envelope"></i>joao.evaristo.work@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>+351 935011957</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100009962471422&locale=pt_PT"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/joao_evaristo11_/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/joão-evaristo-8663b2315/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/joaoevaristo11"><i class="fa-brands fa-github"></i></a>
+                <h1 class="sub-title" id="contact-title">Contact me</h1>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><span class="sr-only">Email: </span>joao.evaristo.work@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone" aria-hidden="true"></i><span class="sr-only">Phone: </span>+351 935011957</p>
+                <div class="social-icons" role="list" aria-label="Social media links">
+                    <a href="https://www.facebook.com/profile.php?id=100009962471422&locale=pt_PT" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/joao_evaristo11_/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joão-evaristo-8663b2315/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/joaoevaristo11" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <a href="images/CV - João Daniel Evaristo - ENG.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 
                 <!-- Contact Form -->
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name:">
-                        <input type="email" name="Email" placeholder="Your Email:">
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form name="submit-to-google-sheet" aria-label="Contact form">
+                        <input type="text" name="Name" placeholder="Your Name:" required aria-label="Your name">
+                        <input type="email" name="Email" placeholder="Your Email:" required aria-label="Your email address">
+                        <textarea name="Message" rows="6" placeholder="Your Message" required aria-label="Your message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -197,10 +235,10 @@
         </div>
         
         <!-- Footer -->
-        <div class="copyright">
-            <p>Copyright © João Evaristo. Made with <i class="fa-solid fa-heart"></i> by João Evaristo</p>
-        </div>
-    </div>
+        <footer class="copyright">
+            <p>Copyright © João Evaristo. Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> by João Evaristo</p>
+        </footer>
+    </section>
     
     <!-- JavaScript -->
     <script src="script.js"></script>

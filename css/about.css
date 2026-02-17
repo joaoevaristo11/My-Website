@@ -81,6 +81,22 @@
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    background: none;
+    border: none;
+    color: #959699;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.tab-links:hover {
+    color: #fff;
+}
+
+.tab-links:focus-visible {
+    outline: 2px solid rgba(0, 184, 212, 0.6);
+    outline-offset: 4px;
+    border-radius: 2px;
 }
 
 .tab-links::after{

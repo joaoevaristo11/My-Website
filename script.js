@@ -22,29 +22,103 @@ window.addEventListener('load', () => {
 });
 
 // Tab Navigation System
-function opentab(tabname) {
+function opentab(tabname, event) {
     const tablinks = document.getElementsByClassName('tab-links');
     const tabcontents = document.getElementsByClassName('tab-contents');
     
+    // Remove active state from all tabs
     for (let tablink of tablinks) {
         tablink.classList.remove('active-link');
+        tablink.setAttribute('aria-selected', 'false');
     }
+    
+    // Hide all tab contents
     for (let tabcontent of tabcontents) {
         tabcontent.classList.remove('active-tab');
+        tabcontent.setAttribute('hidden', 'true');
     }
-    event.currentTarget.classList.add('active-link');
-    document.getElementById(tabname).classList.add('active-tab');
+    
+    // Activate current tab
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active-link');
+        event.currentTarget.setAttribute('aria-selected', 'true');
+    }
+    
+    // Show current tab content
+    const activeTab = document.getElementById(tabname);
+    if (activeTab) {
+        activeTab.classList.add('active-tab');
+        activeTab.removeAttribute('hidden');
+    }
 }
 
-// Mobile Menu System
+// Mobile Menu System - Enhanced for Better UX
 const sidemenu = document.getElementById('sidemenu');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuToggle = document.querySelector('.menu-toggle');
 
 function openmenu() {
     sidemenu.style.right = '0';
+    menuOverlay.classList.add('active');
+    menuOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-open');
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = 'hidden';
 }
 
 function closemenu() {
-    sidemenu.style.right = '-200px';
+    sidemenu.style.right = '-250px';
+    menuOverlay.classList.remove('active');
+    menuOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    // Re-enable body scroll
+    document.body.style.overflow = 'auto';
+}
+
+// Close menu when clicking on a link (Mobile Navigation)
+document.querySelectorAll('#sidemenu a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 767) {
+            closemenu();
+        }
+    });
+});
+
+// Close menu when clicking outside of it
+document.addEventListener('click', (e) => {
+    const nav = document.querySelector('nav');
+    const isClickInsideNav = nav.contains(e.target);
+    const isMenuOpen = sidemenu.style.right === '0px';
+    
+    if (!isClickInsideNav && isMenuOpen && window.innerWidth <= 767) {
+        closemenu();
+    }
+});
+
+// Swipe gesture to close menu on mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+sidemenu.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+sidemenu.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    // Swipe right to close menu
+    if (touchEndX > touchStartX + 50) {
+        closemenu();
+    }
 }
 
 // Contact Form Submission
@@ -224,3 +298,77 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     addScanlineEffect();
 });
+
+// ==========================================
+// MOBILE TOUCH OPTIMIZATION FOR PORTFOLIO
+// ==========================================
+
+// Make portfolio cards tappable on touch devices
+document.addEventListener('DOMContentLoaded', () => {
+    const workItems = document.querySelectorAll('.work');
+    
+    workItems.forEach(item => {
+        // Check if device supports touch
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            let tapTimeout;
+            
+            item.addEventListener('touchstart', (e) => {
+                // Prevent immediate propagation
+                clearTimeout(tapTimeout);
+                
+                // Close other open cards
+                workItems.forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current card
+                item.classList.toggle('active');
+                
+                // Auto close after 5 seconds
+                if (item.classList.contains('active')) {
+                    tapTimeout = setTimeout(() => {
+                        item.classList.remove('active');
+                    }, 5000);
+                }
+            });
+        }
+    });
+});
+
+// ==========================================
+// PERFORMANCE OPTIMIZATIONS
+// ==========================================
+
+// Reduce scroll event listeners on mobile
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            // Scroll-based animations go here
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// Lazy load images for better mobile performance
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
